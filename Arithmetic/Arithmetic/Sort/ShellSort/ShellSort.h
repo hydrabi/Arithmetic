@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 //希尔排序
 @interface ShellSort : NSObject
 +(void)shellSort:(NSMutableArray*)arr;
++(void)shellSortAl:(NSMutableArray*)arr;
 @end
 
 NS_ASSUME_NONNULL_END

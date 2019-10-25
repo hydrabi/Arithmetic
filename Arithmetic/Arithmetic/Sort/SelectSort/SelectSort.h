@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 用选择排序的方式排序
 /// @param arr 需要排序的序列
 +(void)selectSort:(NSMutableArray*)arr;
+
+/// 排序字母
+/// @param arr 需要排序的序列
++(void)selectSortA1:(NSMutableArray*)arr;
 @end
 
 NS_ASSUME_NONNULL_END

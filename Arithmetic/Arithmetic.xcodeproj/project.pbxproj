@@ -10,6 +10,7 @@
 		881CE576234C9E000045687A /* SortCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 881CE575234C9E000045687A /* SortCommon.m */; };
 		885E1614235DD00700F7CC05 /* SortAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 885E1613235DD00700F7CC05 /* SortAnswer.m */; };
 		885E1616235DD06200F7CC05 /* SortAnswer.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 885E1615235DD06200F7CC05 /* SortAnswer.rtf */; };
+		8878E4DF2362E5DA007BF318 /* MergerSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 8878E4DE2362E5DA007BF318 /* MergerSort.m */; };
 		88864FCA210D943E009482C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88864FC9210D943E009482C4 /* AppDelegate.m */; };
 		88864FCD210D943E009482C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88864FCC210D943E009482C4 /* ViewController.m */; };
 		88864FD0210D943E009482C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88864FCE210D943E009482C4 /* Main.storyboard */; };
@@ -50,6 +51,8 @@
 		885E1612235DD00700F7CC05 /* SortAnswer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortAnswer.h; sourceTree = "<group>"; };
 		885E1613235DD00700F7CC05 /* SortAnswer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortAnswer.m; sourceTree = "<group>"; };
 		885E1615235DD06200F7CC05 /* SortAnswer.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = SortAnswer.rtf; sourceTree = "<group>"; };
+		8878E4DD2362E5DA007BF318 /* MergerSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergerSort.h; sourceTree = "<group>"; };
+		8878E4DE2362E5DA007BF318 /* MergerSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MergerSort.m; sourceTree = "<group>"; };
 		88864FC5210D943E009482C4 /* Arithmetic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arithmetic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88864FC8210D943E009482C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		88864FC9210D943E009482C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		881CE573234C9D820045687A /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				8878E4DC2362E5AF007BF318 /* Merger */,
 				885E1611235DCFDF00F7CC05 /* Answer */,
 				88B50B6023546401001F9B7D /* ShellSort */,
 				88B7FEBE234DFE3E00446617 /* InsertSort */,
@@ -128,6 +132,15 @@
 				885E1615235DD06200F7CC05 /* SortAnswer.rtf */,
 			);
 			path = Answer;
+			sourceTree = "<group>";
+		};
+		8878E4DC2362E5AF007BF318 /* Merger */ = {
+			isa = PBXGroup;
+			children = (
+				8878E4DD2362E5DA007BF318 /* MergerSort.h */,
+				8878E4DE2362E5DA007BF318 /* MergerSort.m */,
+			);
+			path = Merger;
 			sourceTree = "<group>";
 		};
 		88864FBC210D943E009482C4 = {
@@ -402,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88B7FEC1234DFFE600446617 /* InsertSort.m in Sources */,
+				8878E4DF2362E5DA007BF318 /* MergerSort.m in Sources */,
 				881CE576234C9E000045687A /* SortCommon.m in Sources */,
 				88B50B6323546421001F9B7D /* ShellSort.m in Sources */,
 				888BCC4C213CDB8D0014F3F1 /* Queue.m in Sources */,

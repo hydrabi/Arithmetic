@@ -22,30 +22,32 @@
         return;
     }
     
-    //排序到倒数第二位 因为只剩下最后两个比较
-    for(NSInteger i=1;i<arr.count-1;i++){
-        [SelectSort sortSingleWithArr:arr fromIndex:i];
+    for(NSInteger i = 0;i<arr.count;i++){
+        NSInteger min = i;
+        for (NSInteger j = i+1; j<arr.count; j++) {
+            if ([SortCommon isLessWithNum1:arr[j] num2:arr[min]]){
+                min = j;
+            }
+        }
+        [SortCommon exch:arr i:i j:min];
     }
-    
 }
 
-+(void)sortSingleWithArr:(NSMutableArray*)arr fromIndex:(NSInteger)fromIndex{
-    if (fromIndex < 1){
++(void)selectSortA1:(NSMutableArray*)arr{
+    
+    if(arr.count == 0 ||arr.count == 1){
         return;
     }
     
-    NSString *minNumber = arr[fromIndex - 1];
-    NSInteger minIndex = fromIndex - 1;
-    for(NSInteger i = fromIndex ; i < arr.count ; i++){
-        //如果靠后的数小于当前最小的数
-        if ([SortCommon isLessWithAl1:arr[i] al2:minNumber]){
-            minNumber = arr[i];
-            minIndex = i;
+    for(NSInteger i = 0;i<arr.count;i++){
+        NSInteger min = i;
+        for (NSInteger j = i+1; j<arr.count; j++) {
+            if ([SortCommon isLessWithAl1:arr[j] al2:arr[min]]){
+                min = j;
+            }
         }
+        [SortCommon exch:arr i:i j:min];
     }
-    
-    [SortCommon exch:arr i:minIndex j:fromIndex-1];
-    NSLog(@"%d %@",fromIndex,arr);
 }
 
 @end
