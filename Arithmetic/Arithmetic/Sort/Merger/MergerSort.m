@@ -82,6 +82,8 @@ static NSMutableArray * aux;
         else{
             arr[k] = aux[i++];
         }
+        
+        NSLog(@"%@",arr);
     }
 }
 

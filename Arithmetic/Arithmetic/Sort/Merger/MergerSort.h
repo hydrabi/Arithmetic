@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MergerSort : NSObject
-
++(void)sortArr:(NSMutableArray*)arr;
 @end
 
 NS_ASSUME_NONNULL_END
