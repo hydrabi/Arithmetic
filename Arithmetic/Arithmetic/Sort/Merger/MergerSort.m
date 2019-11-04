@@ -87,7 +87,6 @@ static NSMutableArray * aux;
     }
 }
 
-<<<<<<< HEAD
 #pragma mark - 自底向上
 //sz = 1
 //0 0 1
