@@ -11,7 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PriorityQueue : NSObject
-
+-(id)delMax;
+-(void)insert:(NSObject*)v;
+-(BOOL)isEmpty;
++(void)sink:(NSMutableArray*)arr k:(NSInteger)k N:(NSInteger)N;
 @end
 
 NS_ASSUME_NONNULL_END

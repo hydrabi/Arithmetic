@@ -22,6 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param al2 字母2
 +(BOOL)isLessWithAl1:(NSString*)al1 al2:(NSString*)al2;
 
+/// 判断i是否少于j
+/// @param i i
+/// @param j j
++(BOOL)isLess:(id)i j:(id)j;
+
 /// 如果不是遵循从小到大的顺序排列 则属于未排序
 /// @param arr 需要判断的队列
 +(BOOL)isSorted:(NSArray*)arr;
