@@ -36,13 +36,17 @@
         h = h * factor + 1;
     }
     
-    for (NSInteger i = h; i<N ; i++){
-        for (NSInteger j = i;j>=h && [SortCommon isLessWithAl1:arr[j] al2:arr[j-h]] ; j-=h){
-            [SortCommon exch:arr i:j j:j-h];
+    while(h>=1){
+        for (NSInteger i = h; i<N ; i++){
+            for (NSInteger j = i;j>=h && [SortCommon isLessWithAl1:arr[j] al2:arr[j-h]] ; j-=h){
+                [SortCommon exch:arr i:j j:j-h];
+            }
+            
+            h = h / factor;
         }
-        
-        h = h / factor;
     }
+    
 }
+
 
 @end

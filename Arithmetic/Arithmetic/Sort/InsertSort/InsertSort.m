@@ -41,4 +41,12 @@
     }
 }
 
++(void)test:(NSMutableArray*)arr{
+    for(NSInteger i = 1;i<arr.count;i++){
+        for(NSInteger j =i;j>0 && [SortCommon isLess:arr[j] j:arr[j-1]];j--){
+            [SortCommon exch:arr i:j j:j-1];
+        }
+    }
+}
+
 @end

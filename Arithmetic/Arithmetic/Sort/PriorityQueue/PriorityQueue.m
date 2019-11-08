@@ -77,34 +77,18 @@
     }
 }
 
-//+(void)sink:(NSMutableArray*)arr k:(NSInteger)k N:(NSInteger)N{
-//    while(2*k <= N){
-//        NSInteger j = 2*k;
-//        //因为是二叉树 只会跑一次 找出子节点中较大的那个
-//        if (j< N && [SortCommon isLess:arr[j] j:arr[j+1]]) {
-//            j++;
-//        }
-//
-//        if (![SortCommon isLess:arr[k] j:arr[j]]){
-//            break;
-//        }
-//
-//        [SortCommon exch:arr i:k j:j];
-//        k = j;
-//    }
-//}
-
 +(void)sink:(NSMutableArray*)arr k:(NSInteger)k N:(NSInteger)N{
-    while (k*2 <= N) {
-        NSInteger j = k*2;
-        if([SortCommon isLess:arr[j] j:arr[j+1]]){
+    while(2*k <= N){
+        NSInteger j = 2*k;
+        //因为是二叉树 只会跑一次 找出子节点中较大的那个
+        if (j< N && [SortCommon isLess:arr[j] j:arr[j+1]]) {
             j++;
         }
-        
-        if(![SortCommon isLess:arr[k] j:arr[j]]){
+
+        if (![SortCommon isLess:arr[k] j:arr[j]]){
             break;
         }
-        
+
         [SortCommon exch:arr i:k j:j];
         k = j;
     }
@@ -123,6 +107,5 @@
         [self sink:arr k:1 N:N];
     }
 }
-
 
 @end

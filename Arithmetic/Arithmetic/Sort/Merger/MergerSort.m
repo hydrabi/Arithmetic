@@ -190,4 +190,56 @@ static NSMutableArray * aux;
     
 }
 
++(void)pMergeSort:(NSMutableArray*)arr l:(NSInteger)l r:(NSInteger)r{
+    if (l == r){
+        return;
+    }
+    
+    NSInteger m = (l+r)/2;
+    [self pMergeSort:arr l:l r:m];
+    [self pMergeSort:arr l:m+1 r:r];
+    [self pMergeArr:arr l:l m:m+1 r:r];
+}
+
++(void)pMergeArr:(NSMutableArray*)arr l:(NSInteger)l m:(NSInteger)m r:(NSInteger)r{
+    NSMutableArray *leftArr = @[].mutableCopy;
+    NSMutableArray *rightArr = @[].mutableCopy;
+    
+    for(NSInteger i =l;i<m;i++){
+        leftArr[i-l] = arr[i];
+    }
+    
+    for(NSInteger j = m;j<=r;j++){
+        rightArr[j-m] = arr[j];
+    }
+    
+    NSInteger i = 0, j = 0;
+    NSInteger k = l;
+    while (i<leftArr.count && j < rightArr.count) {
+        if ([SortCommon isLess:leftArr[i] j:rightArr[j]]){
+            arr[k] = leftArr[i];
+            k++;
+            i++;
+        }
+        else{
+            arr[k] = rightArr[j];
+            j++;
+            k++;
+        }
+    }
+    
+    while(i<leftArr.count){
+        arr[k] = leftArr[i];
+        k++;
+        i++;
+    }
+    
+    while(j<rightArr.count){
+        arr[k] = rightArr[j];
+        k++;
+        j++;
+    }
+
+}
+
 @end
