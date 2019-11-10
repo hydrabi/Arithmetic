@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8090ED61236C2A1B00B66D11 /* QuickSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 8090ED60236C2A1B00B66D11 /* QuickSort.m */; };
 		881CE576234C9E000045687A /* SortCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 881CE575234C9E000045687A /* SortCommon.m */; };
 		885E1614235DD00700F7CC05 /* SortAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 885E1613235DD00700F7CC05 /* SortAnswer.m */; };
 		885E1616235DD06200F7CC05 /* SortAnswer.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 885E1615235DD06200F7CC05 /* SortAnswer.rtf */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8090ED5F236C2A1B00B66D11 /* QuickSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickSort.h; sourceTree = "<group>"; };
+		8090ED60236C2A1B00B66D11 /* QuickSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickSort.m; sourceTree = "<group>"; };
 		881CE574234C9E000045687A /* SortCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortCommon.h; sourceTree = "<group>"; };
 		881CE575234C9E000045687A /* SortCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortCommon.m; sourceTree = "<group>"; };
 		885E1612235DD00700F7CC05 /* SortAnswer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortAnswer.h; sourceTree = "<group>"; };
@@ -111,9 +114,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8090ED5E236C24CF00B66D11 /* Quick */ = {
+			isa = PBXGroup;
+			children = (
+				8090ED5F236C2A1B00B66D11 /* QuickSort.h */,
+				8090ED60236C2A1B00B66D11 /* QuickSort.m */,
+			);
+			path = Quick;
+			sourceTree = "<group>";
+		};
 		881CE573234C9D820045687A /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				8090ED5E236C24CF00B66D11 /* Quick */,
 				8878E4DC2362E5AF007BF318 /* Merger */,
 				885E1611235DCFDF00F7CC05 /* Answer */,
 				88B50B6023546401001F9B7D /* ShellSort */,
@@ -421,6 +434,7 @@
 				888BCC4C213CDB8D0014F3F1 /* Queue.m in Sources */,
 				888BCC48213CCE080014F3F1 /* Stack.m in Sources */,
 				88B7FEBD234DEC7D00446617 /* SelectSort.m in Sources */,
+				8090ED61236C2A1B00B66D11 /* QuickSort.m in Sources */,
 				88864FCD210D943E009482C4 /* ViewController.m in Sources */,
 				88864FD8210D943F009482C4 /* main.m in Sources */,
 				88864FCA210D943E009482C4 /* AppDelegate.m in Sources */,
