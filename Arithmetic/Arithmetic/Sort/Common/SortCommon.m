@@ -26,6 +26,16 @@
     return NO;
 }
 
++(BOOL)isLess:(id)i j:(id)j{
+    if ([i isKindOfClass:[NSNumber class]] && [j isKindOfClass:[NSNumber class]]){
+        return [SortCommon isLessWithNum1:i num2:j];
+    }
+    else if ([i isKindOfClass:[NSString class]] && [j isKindOfClass:[NSString class]]){
+        return [SortCommon isLessWithAl1:i al2:j];
+    }
+    return NO;
+}
+
 +(BOOL)isSorted:(NSArray*)arr{
     for (NSInteger i = 1;i<arr.count;i++){
         if ([SortCommon isLessWithNum1:arr[i] num2:arr[i-1]]){

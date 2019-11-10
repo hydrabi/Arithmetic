@@ -22,6 +22,7 @@
     [secion1 start];
     
     [SortAnswer answer];
+    
 }
 
 

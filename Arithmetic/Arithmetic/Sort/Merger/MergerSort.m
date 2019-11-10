@@ -87,6 +87,41 @@ static NSMutableArray * aux;
     }
 }
 
+#pragma mark - 自底向上
+//sz = 1
+//0 0 1
+//2 2 3
+//4 4 5
+//6 6 7
+//8 8 9
+//10 10 11
+//12 12 13
+//14 14 15
+
+//sz = 2
+//0 1 3
+//4 5 7
+//8 9 11
+//12 13 15
+
+//sz = 4
+//0 3 7
+//8 11 15
+
+//sz = 8
+//0 7 15
+
++(void)upSort:(NSMutableArray*)arr{
+    NSInteger N = arr.count;
+    aux = @[].mutableCopy;
+    
+    for (NSInteger sz=1; sz<N ;sz=sz+sz){
+        for (NSInteger lo=0; lo<N-sz; lo+=sz+sz){
+            [self mergeArr:arr lo:lo mid:lo+sz-1 hi:MIN(lo+sz+sz-1, N-1)];
+        }
+    }
+}
+
 #pragma mark - 理解版本
 
 /// 归并排序
@@ -153,6 +188,58 @@ static NSMutableArray * aux;
         k++;
     }
     
+}
+
++(void)pMergeSort:(NSMutableArray*)arr l:(NSInteger)l r:(NSInteger)r{
+    if (l == r){
+        return;
+    }
+    
+    NSInteger m = (l+r)/2;
+    [self pMergeSort:arr l:l r:m];
+    [self pMergeSort:arr l:m+1 r:r];
+    [self pMergeArr:arr l:l m:m+1 r:r];
+}
+
++(void)pMergeArr:(NSMutableArray*)arr l:(NSInteger)l m:(NSInteger)m r:(NSInteger)r{
+    NSMutableArray *leftArr = @[].mutableCopy;
+    NSMutableArray *rightArr = @[].mutableCopy;
+    
+    for(NSInteger i =l;i<m;i++){
+        leftArr[i-l] = arr[i];
+    }
+    
+    for(NSInteger j = m;j<=r;j++){
+        rightArr[j-m] = arr[j];
+    }
+    
+    NSInteger i = 0, j = 0;
+    NSInteger k = l;
+    while (i<leftArr.count && j < rightArr.count) {
+        if ([SortCommon isLess:leftArr[i] j:rightArr[j]]){
+            arr[k] = leftArr[i];
+            k++;
+            i++;
+        }
+        else{
+            arr[k] = rightArr[j];
+            j++;
+            k++;
+        }
+    }
+    
+    while(i<leftArr.count){
+        arr[k] = leftArr[i];
+        k++;
+        i++;
+    }
+    
+    while(j<rightArr.count){
+        arr[k] = rightArr[j];
+        k++;
+        j++;
+    }
+
 }
 
 @end
