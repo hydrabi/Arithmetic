@@ -129,11 +129,8 @@
 		881CE573234C9D820045687A /* Sort */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				8090ED5E236C24CF00B66D11 /* Quick */,
-=======
 				887B789923700A0600494864 /* PriorityQueue */,
->>>>>>> 061741c9288861474d8c4fffec3925f97bfaeae1
 				8878E4DC2362E5AF007BF318 /* Merger */,
 				885E1611235DCFDF00F7CC05 /* Answer */,
 				88B50B6023546401001F9B7D /* ShellSort */,
