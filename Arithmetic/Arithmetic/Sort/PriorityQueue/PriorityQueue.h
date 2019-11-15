@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)insert:(NSObject*)v;
 -(BOOL)isEmpty;
 +(void)sink:(NSMutableArray*)arr k:(NSInteger)k N:(NSInteger)N;
++(void)sort:(NSMutableArray*)arr;
 @end
 
 NS_ASSUME_NONNULL_END

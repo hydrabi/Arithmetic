@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Section1.h"
 #import "SortAnswer.h"
+#import "PriorityQueue.h"
 @interface ViewController ()
 
 @end
@@ -18,10 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Section1 *secion1 = [[Section1 alloc] init];
-    [secion1 start];
+//    Section1 *secion1 = [[Section1 alloc] init];
+//    [secion1 start];
+//    
+//    [SortAnswer answer];
     
-    [SortAnswer answer];
+    [PriorityQueue sort:@[@(3),@(5),@(3), @(0), @(8), @(6), @(1),@(5),@(8), @(6), @(2), @(4), @(9),@(6)].mutableCopy];
     
 }
 

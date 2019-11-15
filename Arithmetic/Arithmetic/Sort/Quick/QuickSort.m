@@ -9,6 +9,7 @@
 #import "QuickSort.h"
 #import "SortCommon.h"
 
+/// 快速排序
 @implementation QuickSort
 
 //切分法

@@ -48,5 +48,24 @@
     
 }
 
++(void)pSort:(NSMutableArray*)arr{
+    NSInteger n = arr.count;
+    NSInteger k = 1;
+    NSInteger f = 3;
+    while (k < n / 3) {
+        k = k * f + 1;
+    }
+    
+    while (k >= 1) {
+        for (NSInteger i = k ; i < n; i++) {
+            for(NSInteger j = i;j>=k && [SortCommon isLess:arr[j] j:arr[j-k]];j=j-k){
+                [SortCommon exch:arr i:j j:j-k];
+            }
+            
+            k = k * f + 1;
+        }
+    }
+}
+
 
 @end

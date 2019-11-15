@@ -77,11 +77,13 @@
     }
 }
 
-+(void)sink:(NSMutableArray*)arr k:(NSInteger)k N:(NSInteger)N{
-    while(2*k <= N){
-        NSInteger j = 2*k;
+//k是结点的顺序 n是数组长度
++(void)sink:(NSMutableArray*)arr k:(NSInteger)k{
+    NSInteger N = arr.count;
+    while(2*k + 1 < N){
+        NSInteger j = 2*k + 1;
         //因为是二叉树 只会跑一次 找出子节点中较大的那个
-        if (j< N && [SortCommon isLess:arr[j] j:arr[j+1]]) {
+        if (j + 1 < N && [SortCommon isLess:arr[j] j:arr[j+1]]) {
             j++;
         }
 
@@ -91,21 +93,24 @@
 
         [SortCommon exch:arr i:k j:j];
         k = j;
+        NSLog(@"%@",arr);
     }
 }
 
 +(void)sort:(NSMutableArray*)arr{
     NSInteger N = arr.count;
-    //k之所以取N/2 是因为只有从N/2开始 才有子节点 这些才需要下沉
-    for(NSInteger k = N/2; k>=1; k--){
-        [self sink:arr k:k N:N];
+    //k之所以取N/2-1 是因为只有从N/2-1开始 才有子节点 这些才需要下沉
+    for(NSInteger k = N/2 - 1; k>=0; k--){
+        [self sink:arr k:k];
     }
 
     //不断把根结点（最大的结点）往最后一位移 然后N递减 直至不能下沉
-    while (N > 1) {
-        [SortCommon exch:arr i:1 j:N--];
-        [self sink:arr k:1 N:N];
+    while (N > 0) {
+        [SortCommon exch:arr i:0 j:--N];
+        [self sink:arr k:0];
     }
+    NSLog(@"%@",arr);
 }
+
 
 @end

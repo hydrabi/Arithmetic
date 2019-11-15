@@ -128,14 +128,14 @@ static NSMutableArray * aux;
 /// @param arr 需要排序的队列
 /// @param l 指向数组第一个元素
 /// @param r 指向数组最后一个元素
--(void)testMergeSort:(NSMutableArray*)arr l:(NSInteger)l r:(NSInteger)r {
++(void)testMergeSort:(NSMutableArray*)arr l:(NSInteger)l r:(NSInteger)r {
     //如果只有一个元素 就不用排序了
     if (l == r){
         return;
     }
     else{
         //取中间的数，进行拆分
-        NSInteger m = (l + r) / 2;
+        NSInteger m = l + (l + r) / 2;
         //左边的数不断进行拆分
         [self testMergeSort:arr l:l r:m];
         //右边的数不断进行拆分
@@ -145,7 +145,7 @@ static NSMutableArray * aux;
     }
 }
 
--(void)testMerge:(NSMutableArray*)arr l:(NSInteger)l m:(NSInteger)m r:(NSInteger)r{
++(void)testMerge:(NSMutableArray*)arr l:(NSInteger)l m:(NSInteger)m r:(NSInteger)r{
     //左边的数组
     NSMutableArray *leftArr = @[].mutableCopy;
     //右边的数组
@@ -190,56 +190,5 @@ static NSMutableArray * aux;
     
 }
 
-+(void)pMergeSort:(NSMutableArray*)arr l:(NSInteger)l r:(NSInteger)r{
-    if (l == r){
-        return;
-    }
-    
-    NSInteger m = (l+r)/2;
-    [self pMergeSort:arr l:l r:m];
-    [self pMergeSort:arr l:m+1 r:r];
-    [self pMergeArr:arr l:l m:m+1 r:r];
-}
-
-+(void)pMergeArr:(NSMutableArray*)arr l:(NSInteger)l m:(NSInteger)m r:(NSInteger)r{
-    NSMutableArray *leftArr = @[].mutableCopy;
-    NSMutableArray *rightArr = @[].mutableCopy;
-    
-    for(NSInteger i =l;i<m;i++){
-        leftArr[i-l] = arr[i];
-    }
-    
-    for(NSInteger j = m;j<=r;j++){
-        rightArr[j-m] = arr[j];
-    }
-    
-    NSInteger i = 0, j = 0;
-    NSInteger k = l;
-    while (i<leftArr.count && j < rightArr.count) {
-        if ([SortCommon isLess:leftArr[i] j:rightArr[j]]){
-            arr[k] = leftArr[i];
-            k++;
-            i++;
-        }
-        else{
-            arr[k] = rightArr[j];
-            j++;
-            k++;
-        }
-    }
-    
-    while(i<leftArr.count){
-        arr[k] = leftArr[i];
-        k++;
-        i++;
-    }
-    
-    while(j<rightArr.count){
-        arr[k] = rightArr[j];
-        k++;
-        j++;
-    }
-
-}
 
 @end

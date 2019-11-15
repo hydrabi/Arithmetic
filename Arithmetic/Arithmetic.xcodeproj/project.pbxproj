@@ -25,6 +25,7 @@
 		888BCC48213CCE080014F3F1 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BCC47213CCE080014F3F1 /* Stack.m */; };
 		888BCC4C213CDB8D0014F3F1 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BCC4B213CDB8D0014F3F1 /* Queue.m */; };
 		88A7F497213929E800E0F99C /* ListObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A7F496213929E800E0F99C /* ListObject.m */; };
+		88AA3267237A59D1002A738B /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AA3266237A59D1002A738B /* BubbleSort.m */; };
 		88B50B6323546421001F9B7D /* ShellSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B50B6223546421001F9B7D /* ShellSort.m */; };
 		88B7FEBD234DEC7D00446617 /* SelectSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B7FEBC234DEC7C00446617 /* SelectSort.m */; };
 		88B7FEC1234DFFE600446617 /* InsertSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B7FEC0234DFFE600446617 /* InsertSort.m */; };
@@ -84,6 +85,8 @@
 		888BCC4E213D0EE30014F3F1 /* Iterator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iterator.h; sourceTree = "<group>"; };
 		88A7F495213929E800E0F99C /* ListObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListObject.h; sourceTree = "<group>"; };
 		88A7F496213929E800E0F99C /* ListObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListObject.m; sourceTree = "<group>"; };
+		88AA3265237A59D1002A738B /* BubbleSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
+		88AA3266237A59D1002A738B /* BubbleSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
 		88B50B6123546421001F9B7D /* ShellSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShellSort.h; sourceTree = "<group>"; };
 		88B50B6223546421001F9B7D /* ShellSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShellSort.m; sourceTree = "<group>"; };
 		88B7FEBB234DEC7C00446617 /* SelectSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectSort.h; sourceTree = "<group>"; };
@@ -129,13 +132,13 @@
 		881CE573234C9D820045687A /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				8878E4DC2362E5AF007BF318 /* Merger */,
 				8090ED5E236C24CF00B66D11 /* Quick */,
 				887B789923700A0600494864 /* PriorityQueue */,
-				8878E4DC2362E5AF007BF318 /* Merger */,
-				885E1611235DCFDF00F7CC05 /* Answer */,
 				88B50B6023546401001F9B7D /* ShellSort */,
 				88B7FEBE234DFE3E00446617 /* InsertSort */,
 				88B7FEBA234DEC3200446617 /* SelectSort */,
+				88AA3264237A58CE002A738B /* Bubble */,
 				88B7FEB9234DEC2500446617 /* Common */,
 			);
 			path = Sort;
@@ -192,6 +195,7 @@
 		88864FC7210D943E009482C4 /* Arithmetic */ = {
 			isa = PBXGroup;
 			children = (
+				885E1611235DCFDF00F7CC05 /* Answer */,
 				881CE573234C9D820045687A /* Sort */,
 				88864FFA210D9460009482C4 /* Section1 */,
 				88864FC8210D943E009482C4 /* AppDelegate.h */,
@@ -271,6 +275,15 @@
 				88A7F496213929E800E0F99C /* ListObject.m */,
 			);
 			path = "链表";
+			sourceTree = "<group>";
+		};
+		88AA3264237A58CE002A738B /* Bubble */ = {
+			isa = PBXGroup;
+			children = (
+				88AA3265237A59D1002A738B /* BubbleSort.h */,
+				88AA3266237A59D1002A738B /* BubbleSort.m */,
+			);
+			path = Bubble;
 			sourceTree = "<group>";
 		};
 		88B50B6023546401001F9B7D /* ShellSort */ = {
@@ -451,6 +464,7 @@
 				8090ED61236C2A1B00B66D11 /* QuickSort.m in Sources */,
 				88864FCD210D943E009482C4 /* ViewController.m in Sources */,
 				88864FD8210D943F009482C4 /* main.m in Sources */,
+				88AA3267237A59D1002A738B /* BubbleSort.m in Sources */,
 				88864FCA210D943E009482C4 /* AppDelegate.m in Sources */,
 				88A7F497213929E800E0F99C /* ListObject.m in Sources */,
 				88864FFD210D9483009482C4 /* Section1.m in Sources */,
